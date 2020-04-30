@@ -113,3 +113,9 @@ class TestFileStorage(unittest.TestCase):
         with open("file.json", "r") as f:
             js = f.read()
         self.assertEqual(json.loads(string), json.loads(js))
+
+    def test_get_cls_id(self):
+        """check if the obtained object id is null or not"""
+        storage = FileStorage()
+        data = storage.get("Places", 1)
+        self.assertIsNone(data)
