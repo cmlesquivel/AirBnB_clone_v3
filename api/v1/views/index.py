@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# list the routes allow in our app
+""" list the routes allow in our app"""
 from models import storage
 from models.user import User
 from models.state import State
