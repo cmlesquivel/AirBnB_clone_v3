@@ -77,7 +77,8 @@ class BaseModel:
     def update(self, instance_json=None):
         """ updates a instance and sets the correct attributes """
 
-        attributes = ['id', 'created_at', 'updated_at', 'state_id']
+        attributes = ['id', 'created_at', 'updated_at',
+                      'state_id', 'user_id', 'city_id']
 
         if instance_json is not None:
 
