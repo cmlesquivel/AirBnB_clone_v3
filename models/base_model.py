@@ -5,8 +5,8 @@ Contains class BaseModel
 
 from datetime import datetime
 import models
-from os import getenv
-import sqlalchemy
+# from os import getenv
+# import sqlalchemy
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 import uuid
@@ -77,7 +77,7 @@ class BaseModel:
     def update(self, instance_json=None):
         """ updates a instance and sets the correct attributes """
 
-        attributes = ['id', 'created_at', 'updated_at',
+        attributes = ['id', 'created_at', 'updated_at', 'email',
                       'state_id', 'user_id', 'city_id']
 
         if instance_json is not None:
