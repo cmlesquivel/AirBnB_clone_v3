@@ -54,7 +54,7 @@ def create_new_city(state_id=None):
 
     state_object = storage.get(State, state_id)
     if state_object is None:
-        abort(400, "Not found")
+        abort(404, "Not found")
 
     city_object_json = request.get_json()
     if city_object_json is None:
